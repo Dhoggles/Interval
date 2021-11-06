@@ -12,6 +12,7 @@ class Interval:
         return False
 
     def cross(self, other):
+
         print(other.first_point)
 
     # vcs
@@ -20,6 +21,7 @@ class Interval:
 
     # Create git repository (optional)
     # Ctrl + K  (и 1 и 2 фаза)
+    # Ctrl + shift + k
 
 
 
