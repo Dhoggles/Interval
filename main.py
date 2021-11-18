@@ -29,32 +29,3 @@ class Interval:
             if point == i:
                 return True
         return False
-
-# a = Interval(4, 10)
-# b = Interval(6, 11)
-# point = int(input())
-# a.cross(b)
-# a.point_in_interval(4, 10)
-# print(a == b)
-# vcs
-# share project on github
-# https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-
-# Create git repository (optional)
-# Ctrl + K  (и 1 и 2 фаза)
-# Ctrl + shift + k
-
-
-# 3 фазы
-# 1 (выбираешь файлы для архива) git add - выбираешь файлы которые хочешь запомнить
-# 2 (создаёшь архив) git commit - фиксируешь изменения локально и пишешь комментарий почему ты изменила эти фалы (делаешь коммит - можно рассматривать как архив)
-# 3 (отправляешь архив на гихаб) git push - отправляешь коммит в гитхаю
-
-# 1
-# добавить в stage area
-# ctrl + K
-
-# i = Interval(None, None)
-# k = Interval(4, 8)
-# print(i.empty())
-# print(k.empty())
