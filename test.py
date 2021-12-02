@@ -25,6 +25,7 @@ def test_eq():
     b = Interval(4, 10)
     assert a == b
 
+
 range_cross_data = [
     (Interval(2, 8), Interval(3, 5), Interval(3, 5)),
     (Interval(4, 7), Interval(1, 3), Interval(None, None)),
@@ -35,3 +36,37 @@ range_cross_data = [
 @pytest.mark.parametrize("interval1, interval2, expected_result", range_cross_data)
 def test_cross(interval1, interval2, expected_result):
     assert interval1.cross(interval2) == expected_result
+
+
+empty = [
+    (Interval(None, None), True),
+    (Interval(4, 7), False),
+]
+
+
+@pytest.mark.parametrize("interval1, expected_result", empty)
+def test_cross(interval1, expected_result):
+    assert interval1.empty() == expected_result
+
+
+equal = [
+    (Interval(1, 5), Interval(1, 5), True),
+    (Interval(4, 7), Interval(2, 8), False),
+
+]
+
+
+@pytest.mark.parametrize("interval1, interval2, expected_result", equal)
+def test_cross(interval1, interval2, expected_result):
+    assert interval1.__eq__(interval2) == expected_result
+
+point_in_interval = [
+    (Interval(1, 5), 5, True),
+    (Interval(4, 7), 8, False),
+
+]
+
+
+@pytest.mark.parametrize("interval1, point, expected_result", point_in_interval)
+def test_cross(interval1, point, expected_result):
+    assert interval1.point_in_interval() == expected_result

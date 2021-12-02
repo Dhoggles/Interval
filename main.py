@@ -3,9 +3,6 @@ class Interval:
     # когда ты пишешь self ты просишь класс переменную с каким-то именем
     # если ты указала self - то менять перемнную можно в любом методе
     def __init__(self, first_point, last_point):
-        if first_point > last_point:
-            self.first_point, self.last_point = None, None
-            return
         self.first_point = first_point
         self.last_point = last_point
 
